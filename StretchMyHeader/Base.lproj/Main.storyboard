@@ -66,9 +66,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="GB1-3x-6dw">
+                            <rect key="frame" x="0.0" y="64" width="600" height="305"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-header" translatesAutoresizingMaskIntoConstraints="NO" id="hpk-hO-aCY">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="305"/>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z0R-mx-Hq3">
+                                    <rect key="frame" x="8" y="8" width="206" height="29"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="206" id="ItI-Xk-4AO"/>
+                                        <constraint firstAttribute="height" constant="29" id="WHi-8f-B5L"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="hpk-hO-aCY" secondAttribute="trailing" id="0hJ-BP-3lF"/>
+                                <constraint firstItem="hpk-hO-aCY" firstAttribute="top" secondItem="GB1-3x-6dw" secondAttribute="top" id="JOP-Om-Nph"/>
+                                <constraint firstItem="hpk-hO-aCY" firstAttribute="leading" secondItem="GB1-3x-6dw" secondAttribute="leading" id="kkm-Xg-iK6"/>
+                                <constraint firstItem="Z0R-mx-Hq3" firstAttribute="top" secondItem="GB1-3x-6dw" secondAttribute="top" constant="8" id="lu0-KN-mIz"/>
+                                <constraint firstAttribute="bottom" secondItem="hpk-hO-aCY" secondAttribute="bottom" id="qQW-NP-Xhy"/>
+                                <constraint firstItem="Z0R-mx-Hq3" firstAttribute="leading" secondItem="GB1-3x-6dw" secondAttribute="leading" constant="8" id="wL2-sB-ZFt"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NewsCell" rowHeight="50" id="WCw-Qf-5nD" customClass="NewsTableViewCell" customModule="StretchMyHeader" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="86" width="600" height="50"/>
+                                <rect key="frame" x="0.0" y="391" width="600" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WCw-Qf-5nD" id="37f-cq-3Eg">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="49"/>
@@ -115,10 +143,17 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Master" id="Zdf-7t-Un8"/>
+                    <connections>
+                        <outlet property="dateLabel" destination="Z0R-mx-Hq3" id="BVD-MO-act"/>
+                        <outlet property="photoHeaderView" destination="GB1-3x-6dw" id="Ngs-nw-mlM"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="709" y="-630"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bg-header" width="1242" height="825"/>
+    </resources>
 </document>
